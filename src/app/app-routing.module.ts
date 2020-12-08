@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { ApprenantComponent } from './apprenant/apprenant.component';
 import { CmComponent } from './cm/cm.component';
 import { FormateurComponent } from './formateur/formateur.component';
+import { ProfilComponent } from './profil/profil.component';
+import { NavComponent } from './nav/nav.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
@@ -14,7 +16,11 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'apprenant', component: ApprenantComponent},
   {path: 'cm', component: CmComponent},
-  {path: 'formateur', component: FormateurComponent}
+  {path: 'formateur', component: FormateurComponent} ,
+  {path: 'profil', component: ProfilComponent},
+  {path: 'nav', component: NavComponent}
+
+
 
 
 ];

@@ -9,6 +9,8 @@ import { AdminComponent } from './admin/admin.component';
 import { ApprenantComponent } from './apprenant/apprenant.component';
 import { CmComponent } from './cm/cm.component';
 import { FormateurComponent } from './formateur/formateur.component';
+import { ProfilComponent } from './profil/profil.component';
+import { NavComponent } from './nav/nav.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { FormateurComponent } from './formateur/formateur.component';
     AdminComponent,
     ApprenantComponent,
     CmComponent,
-    FormateurComponent
+    FormateurComponent,
+    ProfilComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
