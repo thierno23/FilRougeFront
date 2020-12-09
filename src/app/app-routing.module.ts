@@ -21,8 +21,6 @@ const routes: Routes = [
   {path: 'nav', component: NavComponent}
 
 
-
-
 ];
 
 @NgModule({
