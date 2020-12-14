@@ -9,6 +9,7 @@ import { CmComponent } from './cm/cm.component';
 import { FormateurComponent } from './formateur/formateur.component';
 import { ProfilComponent } from './profil/profil.component';
 import { NavComponent } from './nav/nav.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
@@ -18,7 +19,9 @@ const routes: Routes = [
   {path: 'cm', component: CmComponent},
   {path: 'formateur', component: FormateurComponent} ,
   {path: 'profil', component: ProfilComponent},
-  {path: 'nav', component: NavComponent}
+  {path: 'nav', component: NavComponent},
+  {path: 'notfound', component: NotfoundComponent}
+
 
 
 ];

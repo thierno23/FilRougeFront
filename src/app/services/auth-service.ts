@@ -2,6 +2,8 @@ import { Injectable } from "@angular/core";
 import {HttpClient,HttpHeaders} from '@angular/common/http';
 @Injectable ()
 export class AuthService{
+  roles: Array<string>;
+
   constructor(private http:HttpClient){
 
   }
@@ -9,6 +11,13 @@ export class AuthService{
   login(username: string,password: string){
     const header = new HttpHeaders( {'Content-type':'application/json'});
     const data = '{"username":"' + username + '","password":"' + password +'"}';
-    return this.http.post(this.url,data,{headers:header});
+    return this.http.post<any>(this.url,data,{headers:header});
   }
+   getToken(){
+     return localStorage.getItem('token');
+   }
+
+   isAdmin(){
+     return this.roles.indexOf('ROLE_ADMIN')>=0;
+   }
 }

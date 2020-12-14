@@ -14,6 +14,7 @@ import { ProfilComponent } from './profil/profil.component';
 import { NavComponent } from './nav/nav.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 
 
@@ -27,7 +28,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     CmComponent,
     FormateurComponent,
     ProfilComponent,
-    NavComponent
+    NavComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
