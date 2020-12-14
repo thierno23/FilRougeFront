@@ -20,7 +20,8 @@ const routes: Routes = [
   {path: 'formateur', component: FormateurComponent} ,
   {path: 'profil', component: ProfilComponent},
   {path: 'nav', component: NavComponent},
-  {path: 'notfound', component: NotfoundComponent}
+  {path: 'notfound', component: NotfoundComponent},
+  {path: '**', redirectTo: '/notfound'}
 
 
 
