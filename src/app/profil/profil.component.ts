@@ -15,7 +15,6 @@ export class ProfilComponent implements OnInit {
   this.profilService.getprofils().subscribe(
     data=>{
       this.profils = data;
-      this.profils=this.profils['hydra:member'];
     }
   )
 

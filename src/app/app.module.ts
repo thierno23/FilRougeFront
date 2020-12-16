@@ -1,3 +1,4 @@
+import { HttpinterceptorService } from './services/httpinterceptor.service';
 import { AuthService } from './services/auth-service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -13,9 +14,9 @@ import { FormateurComponent } from './formateur/formateur.component';
 import { ProfilComponent } from './profil/profil.component';
 import { NavComponent } from './nav/nav.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NotfoundComponent } from './notfound/notfound.component';
-
+import { UserComponent } from './user/user.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
     FormateurComponent,
     ProfilComponent,
     NavComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,9 @@ import { NotfoundComponent } from './notfound/notfound.component';
     HttpClientModule
 
   ],
-  providers: [AuthService],
+  providers: [
+    { provide: HTTP_INTERCEPTORS , useClass:HttpinterceptorService, multi:true}
+    ,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

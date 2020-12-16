@@ -10,6 +10,7 @@ import { FormateurComponent } from './formateur/formateur.component';
 import { ProfilComponent } from './profil/profil.component';
 import { NavComponent } from './nav/nav.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { UserComponent } from './user/user.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path: 'profil', component: ProfilComponent},
   {path: 'nav', component: NavComponent},
   {path: 'notfound', component: NotfoundComponent},
+  {path: 'user', component: UserComponent},
   {path: '**', redirectTo: '/notfound'}
 
 
