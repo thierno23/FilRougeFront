@@ -1,7 +1,13 @@
 .jul {
-color:#45c3cf;
+color:hsl(185, 59%, 54%);
 }
 
 .jul:hover {
   color:#ee7e28;
 }
+ .mek{
+border: solid 1px hsl(185, 59%, 54%);
+  color:#ee7e28;
+  box-shadow: #ee7e28;
+
+ }

@@ -3,15 +3,17 @@
 <img src="../assets/img/bg3.jpg" alt="" style="width:100%;height: 628px; position: fixed;">
 <div class="container">
   <div class="row">
-    <div class="col-10 offset-1">
-  <table class="table">
+    <div class="col-10 offset-1 np">
+  <table class="table" >
     <thead>
-      <tr>
+      <tr style="background-color:#45c3cf; color: white;">
         <th scope="col">id</th>
         <th scope="col">prenom </th>
         <th scope="col">nom</th>
         <th scope="col">Adresse</th>
         <th scope="col">EDIT</th>
+        <th scope="col">DELETE</th>
+
 
       </tr>
     </thead>
@@ -22,6 +24,8 @@
         <td>{{user.prenom}}</td>
         <td>{{user.adresse}}</td>
         <td><a class="fa fa-edit  jul"  href="#"></a> </td>
+        <td><a class="fa fa-archive jul"  href="#"></a> </td>
+
       </tr>
     </tbody>
   </table>

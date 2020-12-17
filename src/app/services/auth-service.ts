@@ -1,10 +1,12 @@
+import { Router } from '@angular/router';
 import { Injectable } from "@angular/core";
 import {HttpClient,HttpHeaders} from '@angular/common/http';
+import { Token } from '@angular/compiler/src/ml_parser/lexer';
 @Injectable ()
 export class AuthService{
   roles: Array<string>;
 
-  constructor(private http:HttpClient){
+  constructor(private http:HttpClient, private router:Router ){
 
   }
   private url="http://127.0.0.1:8000/api/login_check"
@@ -19,5 +21,10 @@ export class AuthService{
 
    isAdmin(){
      return this.roles.indexOf('ROLE_ADMIN')>=0;
+   }
+
+   logout(){
+     localStorage.removeItem('token') ;
+     this.router.navigate(['/login'])
    }
 }

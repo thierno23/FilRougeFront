@@ -5,4 +5,10 @@
   .jul:hover {
     color:#ee7e28;
   }
-  
+
+
+.np{
+
+  height: 500px;
+  overflow-y: scroll;
+}
