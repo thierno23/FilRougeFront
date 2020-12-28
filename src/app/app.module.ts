@@ -17,6 +17,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { UserComponent } from './user/user.component';
+import { AdduserComponent } from './adduser/adduser.component';
+import { AngularMaterialModule } from './materialAngular/angular-material.module';
+import { PromoComponent } from './promo/promo.component';
+import { ReferentielsComponent } from './referentiels/referentiels.component';
+import { CompetenceComponent } from './competence/competence.component';
+import { GrpcompetenceComponent } from './grpcompetence/grpcompetence.component';
+import { ProfildesortieComponent } from './profildesortie/profildesortie.component';
 
 
 @NgModule({
@@ -31,13 +38,20 @@ import { UserComponent } from './user/user.component';
     ProfilComponent,
     NavComponent,
     NotfoundComponent,
-    UserComponent
+    UserComponent,
+    AdduserComponent,
+    PromoComponent,
+    ReferentielsComponent,
+    CompetenceComponent,
+    GrpcompetenceComponent,
+    ProfildesortieComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule ,
-    HttpClientModule
+    HttpClientModule,
+    AngularMaterialModule
 
   ],
   providers: [

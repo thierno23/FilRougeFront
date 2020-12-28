@@ -1,19 +1,34 @@
-<nav>
-  <ul>
-    <li>
-      <a href="">
-  <img class="logo" src="assets/img/Logo1.png"style="margin-right:;">
-      </a>
-    </li>
-    <li>
-      <a  routerLink="/profil" routerLinkActive="active-link">Liste des Profils</a>
-    </li>
-    <li>
-      <a routerLink="/user" routerLinkActive="active-link">Liste des utilisateurs</a>
-    </li>
-    <li>
-      <a href="" (click)="sedeconecter()" style="margin-left: 100px; color:red;">DECONNEXION </a>
-    </li>
-  </ul>
-</nav>
+<nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+	<a href="#" class="navbar-brand" ><i class="f" ></i>Sonatel <b >Academy</b></a>
+	<div id="navbarCollapse" class="collapse.show navbar-collapse justify-content-start">
+    <div class="row "></div>
+		<div class="navbar-nav ml-auto  mr-auto">
+      <a href="#" class="nav-item nav-link"><i class="fa fa-envelope"></i><span>Rendus</span></a>
+			<a href="#" class="nav-item nav-link"><i class="fa fa-briefcase"></i><span>Briefs</span></a>
+			<a href="#" class="nav-item nav-link"><i class="fa fa-link"></i><span>Explorer</span></a>
+      <a href="#" class="nav-item nav-link"><i class="fa fa-commenting"></i><span>Forum</span></a>
 
+      <div class="dropdown " style="margin-top: -9px;">
+        <button class="btn dropdown-toggle nav-item nav-link" type="button" id="dropdownMenuButton"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-gears "></i><br>
+        <span >Paramétres</span>
+        </button>
+        <div class="dropdown-menu " aria-labelledby="dropdownMenuButton" >
+          <a class="dropdown-item" routerLink="/promo" routerLinkActive="active-link" >Promos</a>
+          <a class="dropdown-item" routerLink="/referentiels" routerLinkActive="active-link">Référentiels</a>
+          <a class="dropdown-item" routerLink="/grpcompetence" routerLinkActive="active-link">Groupe de compétences</a>
+          <a class="dropdown-item" routerLink="/competence" routerLinkActive="active-link">Compétences</a>
+          <a class="dropdown-item" routerLink="/profildesortie" routerLinkActive="active-link">Profil de sortie</a>
+
+        </div>
+      </div>
+			<a href="#" class="nav-item nav-link" routerLink="/user" routerLinkActive="active-link"><i class="fa fa-users"></i><span>Users</span></a>
+			<a href="#" class="nav-item nav-link active"><i class="fa fa-history"></i><span>Historiques</span></a>
+      <a href="#" class="nav-item nav-link" routerLink="/profil" routerLinkActive="active-link" >
+      <i class="fa fa-user"></i><span>Profil</span></a>
+      <a href="#" class="nav-item nav-link"><i class="fa fa-bell" ></i><span>Notifs</span></a>
+    </div>
+  </div>
+  <a href="" (click)="sedeconecter()" class="nav-item nav-link  fa fa-sign-out"  style=" color:#ee7e28;; font-size: 25px;"> </a>
+</nav>

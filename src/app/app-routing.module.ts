@@ -1,3 +1,4 @@
+import { ReferentielsComponent } from './referentiels/referentiels.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
@@ -11,6 +12,11 @@ import { ProfilComponent } from './profil/profil.component';
 import { NavComponent } from './nav/nav.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { UserComponent } from './user/user.component';
+import { AdduserComponent } from './adduser/adduser.component';
+import { PromoComponent } from './promo/promo.component';
+import { CompetenceComponent } from './competence/competence.component';
+import { GrpcompetenceComponent } from './grpcompetence/grpcompetence.component';
+import { ProfildesortieComponent } from './profildesortie/profildesortie.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
@@ -23,6 +29,14 @@ const routes: Routes = [
   {path: 'nav', component: NavComponent},
   {path: 'notfound', component: NotfoundComponent},
   {path: 'user', component: UserComponent},
+  {path: 'adduser', component: AdduserComponent},
+  {path: 'promo', component: PromoComponent },
+  {path: 'referentiels', component: ReferentielsComponent},
+  {path: 'competence', component: CompetenceComponent},
+  {path: 'grpcompetence', component: GrpcompetenceComponent},
+  {path: 'profildesortie', component: ProfildesortieComponent},
+
+
   {path: '**', redirectTo: '/notfound'}
 
 
