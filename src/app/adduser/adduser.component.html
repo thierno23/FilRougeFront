@@ -1,50 +1,95 @@
-<div class="container">
-  <form>
-    <div class="form-row">
-      <div class="form-group col-md-6">
+
+<nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+	<a href="#" class="navbar-brand" ><i class="f" ></i>Sonatel <b >Academy</b></a>
+	<div id="navbarCollapse" class="collapse.show navbar-collapse justify-content-start">
+    <div class="row "></div>
+		<div class="navbar-nav ml-auto  mr-auto">
+      <a href="#" class="nav-item nav-link"><i class="fa fa-envelope"></i><span>Rendus</span></a>
+			<a href="#" class="nav-item nav-link"><i class="fa fa-briefcase"></i><span>Briefs</span></a>
+			<a href="#" class="nav-item nav-link"><i class="fa fa-link"></i><span>Explorer</span></a>
+      <a href="#" class="nav-item nav-link"><i class="fa fa-commenting"></i><span>Forum</span></a>
+
+      <div class="dropdown " style="margin-top: -9px;">
+        <button class="btn dropdown-toggle nav-item nav-link" type="button" id="dropdownMenuButton"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-gears "></i><br>
+        <span >Paramétres</span>
+        </button>
+        <div class="dropdown-menu " aria-labelledby="dropdownMenuButton" >
+          <a class="dropdown-item" routerLink="/promo" routerLinkActive="active-link" >Promos</a>
+          <a class="dropdown-item" routerLink="/referentiels" routerLinkActive="active-link">Référentiels</a>
+          <a class="dropdown-item" routerLink="/grpcompetence" routerLinkActive="active-link">Groupe de compétences</a>
+          <a class="dropdown-item" routerLink="/competence" routerLinkActive="active-link">Compétences</a>
+          <a class="dropdown-item" routerLink="/profildesortie" routerLinkActive="active-link">Profil de sortie</a>
+
+        </div>
+      </div>
+			<a href="#" class="nav-item nav-link" routerLink="/user" routerLinkActive="active-link"><i class="fa fa-users"></i><span>Users</span></a>
+			<a href="#" class="nav-item nav-link active"><i class="fa fa-history"></i><span>Historiques</span></a>
+      <a href="#" class="nav-item nav-link" routerLink="/profil" routerLinkActive="active-link" >
+      <i class="fa fa-user"></i><span>Profil</span></a>
+      <a href="#" class="nav-item nav-link"><i class="fa fa-bell" ></i><span>Notifs</span></a>
+    </div>
+  </div>
+  <a href=""  class="nav-item nav-link  fa fa-sign-out"  style=" color:#ee7e28;; font-size: 25px;"> </a>
+</nav>
+
+<img src="../assets/img/bg3.jpg" alt="" style="width:100%;height: 670px; position: fixed;">
+
+
+
+
+<div class="container   ">
+  <div class=" mt-3" style="position: relative;">
+    <div class="img" style="float: right;  margin-top: 5%;">
+      <img src="assets/img/jul.jpg" alt="" id="avatar" style="width:150px; height:150px; border-radius:50%; border: solid 4px #ee7e28 ;" >
+      <br>
+      <p style="margin-left:45px;">Avatar <p>
+  </div>
+  <h4 style="color:#ee7e28 ; margin-top: 25px;margin-left:34%;letter-spacing: 6px;"  class=" "><b>AJOUTER UN UTILISATEUR</b></h4>
+
+  <form class="mt-3 container col-md-6" enctype="multipart/form-data" id="avatar" style="position: absolute;">
+
+    <div class="form-group col-md-12">
+      <label for="inputAddress2">Nom</label>
+      <input type="text" class="form-control" id="inputAddress2" placeholder="entrer votre nom">
+    </div>
+    <div class="form-group col-md-12">
+      <label for="inputAddress2">Prénom</label>
+      <input type="text" class="form-control" id="inputAddress2" placeholder="entrer votre prénom">
+    </div>
+    <div class="form-group ">
+      <div class="form-group col-md-12">
         <label for="inputEmail4">Email</label>
         <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
       </div>
+    </div>
       <div class="form-group col-md-6">
-        <label for="inputPassword4">Password</label>
-        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="inputAddress">Address</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-    </div>
-    <div class="form-group">
-      <label for="inputAddress2">Address 2</label>
-      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="inputCity">City</label>
-        <input type="text" class="form-control" id="inputCity">
-      </div>
-      <div class="form-group col-md-4">
-        <label for="inputState">State</label>
+        <label for="inputState">Profil</label>
         <select id="inputState" class="form-control">
-          <option selected>Choose...</option>
-          <option>...</option>
+          <option selected>Administrateur</option>
+          <option>CM</option>
+          <option>Formateur</option>
         </select>
       </div>
-      <div class="form-group col-md-2">
-        <label for="inputZip">Zip</label>
-        <input type="text" class="form-control" id="inputZip">
+
+      <div class="form-group col-md-12">
+      <label for="avatar"> Choisir un Avatar</label>
+      <br>
+      <input type="file" id="avatar" name="avatar"   accept="image/*" onchange="loadFile(event)" class="file">
       </div>
-    </div>
-    <div class="form-group">
+
+    <div class="form-group ml-3">
       <div class="form-check">
         <input class="form-check-input" type="checkbox" id="gridCheck">
         <label class="form-check-label" for="gridCheck">
-          Check me out
+          Je confirme
         </label>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Ajouter</button>
+    <button type="submit" class="btn btn-success ml-3" style="position: relative; background-color:#ee7e28 ;">Ajouter</button>
   </form>
 
 
 </div>
+
