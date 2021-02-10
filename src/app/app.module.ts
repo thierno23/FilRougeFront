@@ -13,7 +13,7 @@ import { CmComponent } from './cm/cm.component';
 import { FormateurComponent } from './formateur/formateur.component';
 import { ProfilComponent } from './profil/profil.component';
 import { NavComponent } from './nav/nav.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { UserComponent } from './user/user.component';
@@ -51,7 +51,8 @@ import { ProfildesortieComponent } from './profildesortie/profildesortie.compone
     AppRoutingModule,
     FormsModule ,
     HttpClientModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    ReactiveFormsModule
 
   ],
   providers: [

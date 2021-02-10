@@ -18,4 +18,9 @@ export class UserserviceService {
     return this.http.get<any>(this._url);
   }
 
+  addusers(data:any){
+
+    return this.http.post<any>(this._url,data ).subscribe(result=>{console.log(result)}) ;
+  }
+
 }
